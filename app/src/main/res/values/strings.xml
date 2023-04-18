@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppListaCurso</string>
+    <string name="titulo">Aplicativo Lista VIP Curso Android</string>
+    <string name="nome">Primeiro nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="cursoDesejado">Curso Desejado</string>
+    <string name="telefone">Telefone de contato</string>
+    <string name="btnLimpar">LIMPAR</string>
+    <string name="btnSalvar">SALVAR</string>
+    <string name="btnFinalizar">FINALIZAR</string>
+
 </resources>
