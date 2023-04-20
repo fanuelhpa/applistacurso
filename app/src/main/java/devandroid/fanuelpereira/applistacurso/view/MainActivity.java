@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import devandroid.fanuelpereira.applistacurso.R;
 import devandroid.fanuelpereira.applistacurso.model.Pessoa;
@@ -45,6 +46,36 @@ public class MainActivity extends AppCompatActivity {
     edtTxtSobrenome.setText(pessoa.getSobreNome());
     edtTxtTelefoneContato.setText(pessoa.getTelefoneContato());
     edtTxtCursoDesejado.setText(pessoa.getCursoDesejado());
+
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edtTxtPrimeiroNome.setText("");
+                edtTxtSobrenome.setText("");
+                edtTxtCursoDesejado.setText("");
+                edtTxtTelefoneContato.setText("");
+            }
+        });
+
+        btnFinalizar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Volte sempre!",Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
+
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pessoa.setPrimeiroNome(edtTxtPrimeiroNome.getText().toString());
+                pessoa.setSobreNome(edtTxtSobrenome.getText().toString());
+                pessoa.setCursoDesejado(edtTxtCursoDesejado.getText().toString());
+                pessoa.setTelefoneContato(edtTxtTelefoneContato.getText().toString());
+
+                Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
 
     int mark = 0;
     }
