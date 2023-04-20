@@ -5,8 +5,8 @@
     <string name="sobrenome">Sobrenome</string>
     <string name="cursoDesejado">Curso Desejado</string>
     <string name="telefone">Telefone de contato</string>
-    <string name="btnLimpar">LIMPAR</string>
-    <string name="btnSalvar">SALVAR</string>
-    <string name="btnFinalizar">FINALIZAR</string>
+    <string name="txt_btnLimpar">LIMPAR</string>
+    <string name="txt_btnSalvar">SALVAR</string>
+    <string name="txt_btnFinalizar">FINALIZAR</string>
 
 </resources>
