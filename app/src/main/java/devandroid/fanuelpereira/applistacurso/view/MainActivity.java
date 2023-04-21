@@ -41,25 +41,30 @@ public class MainActivity extends AppCompatActivity {
 
         pessoaController = new PessoaController();
         pessoaController.toString();
+
         pessoa = new Pessoa();
 
-        pessoa.setPrimeiroNome("Fanuel");
-        pessoa.setSobreNome("Pereira");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setTelefoneContato("(31) 99248-6568");
+        //constrói o objeto baseado no conteúdo presente no arquivo listaVip
+        pessoa.setPrimeiroNome(srdPreferences.getString("primeiroNome", ""));
+        pessoa.setSobreNome(srdPreferences.getString("sobrenome",""));
+        pessoa.setCursoDesejado(srdPreferences.getString("cursoDesejado",""));
+        pessoa.setTelefoneContato(srdPreferences.getString("telefoneContato",""));
 
+        //linka os campos da view para o objeto edtTxt
         edtTxtPrimeiroNome = findViewById(R.id.edtTxtPrimeiroNome);
         edtTxtSobrenome = findViewById(R.id.edtTxtSobrenome);
         edtTxtCursoDesejado = findViewById(R.id.edtTxtCursoDesejado);
         edtTxtTelefoneContato = findViewById(R.id.edtTxtTelefoneContato);
+
+        //Preenche os campos com o conteúdo do objeto pessoa
+        edtTxtPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        edtTxtSobrenome.setText(pessoa.getSobreNome());
+        edtTxtCursoDesejado.setText(pessoa.getCursoDesejado());
+        edtTxtTelefoneContato.setText(pessoa.getTelefoneContato());
+
         btnLimpar = findViewById(R.id.btnLimpar);
         btnSalvar = findViewById(R.id.btnSalvar);
         btnFinalizar = findViewById(R.id.btnFinalizar);
-
-        edtTxtPrimeiroNome.setText(pessoa.getPrimeiroNome());
-        edtTxtSobrenome.setText(pessoa.getSobreNome());
-        edtTxtTelefoneContato.setText(pessoa.getTelefoneContato());
-        edtTxtCursoDesejado.setText(pessoa.getCursoDesejado());
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
