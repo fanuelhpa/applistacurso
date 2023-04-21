@@ -1,7 +1,9 @@
 package devandroid.fanuelpereira.applistacurso.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,25 +29,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    pessoa = new Pessoa();
+        pessoa = new Pessoa();
 
-    pessoa.setPrimeiroNome("Fanuel");
-    pessoa.setSobreNome("Pereira");
-    pessoa.setCursoDesejado("Android");
-    pessoa.setTelefoneContato("(31) 99248-6568");
+        pessoa.setPrimeiroNome("Fanuel");
+        pessoa.setSobreNome("Pereira");
+        pessoa.setCursoDesejado("Android");
+        pessoa.setTelefoneContato("(31) 99248-6568");
 
-    edtTxtPrimeiroNome = findViewById(R.id.edtTxtPrimeiroNome);
-    edtTxtSobrenome = findViewById(R.id.edtTxtSobrenome);
-    edtTxtCursoDesejado = findViewById(R.id.edtTxtCursoDesejado);
-    edtTxtTelefoneContato = findViewById(R.id.edtTxtTelefoneContato);
-    btnLimpar = findViewById(R.id.btnLimpar);
-    btnSalvar = findViewById(R.id.btnSalvar);
-    btnFinalizar = findViewById(R.id.btnFinalizar);
+        edtTxtPrimeiroNome = findViewById(R.id.edtTxtPrimeiroNome);
+        edtTxtSobrenome = findViewById(R.id.edtTxtSobrenome);
+        edtTxtCursoDesejado = findViewById(R.id.edtTxtCursoDesejado);
+        edtTxtTelefoneContato = findViewById(R.id.edtTxtTelefoneContato);
+        btnLimpar = findViewById(R.id.btnLimpar);
+        btnSalvar = findViewById(R.id.btnSalvar);
+        btnFinalizar = findViewById(R.id.btnFinalizar);
 
-    edtTxtPrimeiroNome.setText(pessoa.getPrimeiroNome());
-    edtTxtSobrenome.setText(pessoa.getSobreNome());
-    edtTxtTelefoneContato.setText(pessoa.getTelefoneContato());
-    edtTxtCursoDesejado.setText(pessoa.getCursoDesejado());
+        edtTxtPrimeiroNome.setText(pessoa.getPrimeiroNome());
+        edtTxtSobrenome.setText(pessoa.getSobreNome());
+        edtTxtTelefoneContato.setText(pessoa.getTelefoneContato());
+        edtTxtCursoDesejado.setText(pessoa.getCursoDesejado());
 
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         btnFinalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Volte sempre!",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Volte sempre!", Toast.LENGTH_LONG).show();
                 finish();
             }
         });
@@ -77,6 +79,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    int mark = 0;
+        Log.i("POOAndroid", "Objeto Pessoa" + pessoa.toString());
     }
 }
