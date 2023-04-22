@@ -36,7 +36,6 @@ public class PessoaController {
         listaVip.apply();;
 
         Toast.makeText(context, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
-
     }
 
     public Pessoa buscarDados(Pessoa pessoa){
